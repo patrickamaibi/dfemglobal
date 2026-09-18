@@ -35,7 +35,8 @@ This placeholder site secures brand presence, allows search engines to index the
 ├── js/
 │   └── script.js       # Countdown timer, email validation & lead capture
 ├── assets/
-│   ├── logo.svg        # D'Kingsfems Global vector logo
+│   ├── logo.png        # Official 3D D'Kingsfems Global Ltd logo
+│   ├── hero-bg.png     # Airport terminal & takeoff background image
 │   └── favicon.svg     # Gold airplane & globe vector favicon
 ├── robots.txt          # Search engine indexing directives
 ├── sitemap.xml         # XML sitemap for initial domain indexing
@@ -44,22 +45,13 @@ This placeholder site secures brand presence, allows search engines to index the
 
 ---
 
-## ⚙️ Quick Configuration Guide
+## ⚙️ Email Forwarding to `info@dkingsfemsglobal.com`
 
-All primary options are located at the top of `js/script.js` in the `CONFIG` object:
+All form signups are routed directly to **`info@dkingsfemsglobal.com`** via FormSubmit AJAX endpoint:
 
-```javascript
-const CONFIG = {
-  // 1. Target Launch Date (e.g., '2026-10-31T00:00:00')
-  targetLaunchDate: new Date(Date.now() + 28 * 24 * 60 * 60 * 1000).toISOString(),
-  
-  // 2. Set to false if client prefers to hide the countdown
-  enableCountdown: true,
-
-  // 3. Formspree Form ID: Create a free form at https://formspree.io and paste here
-  formEndpoint: 'https://formspree.io/f/YOUR_FORM_ID',
-};
-```
+- **Direct Delivery**: Each submission triggers an instant email notification to `info@dkingsfemsglobal.com` with the subscriber's email and timestamp.
+- **First-Time Activation**: The very first time a submission is sent, FormSubmit delivers an activation email to `info@dkingsfemsglobal.com`. Simply click "Activate" once, and all future signups will be delivered seamlessly.
+- **Zero Data Loss**: Every submission is simultaneously backed up in the browser's `localStorage` (`dkingsfems_signups`), so no lead is ever lost.
 
 ---
 

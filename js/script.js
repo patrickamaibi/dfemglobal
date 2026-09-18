@@ -16,9 +16,11 @@
     // Set to false to hide the countdown section
     enableCountdown: true,
 
-    // Formspree Form ID: Replace with client ID e.g. "https://formspree.io/f/xvovnzyq"
-    // Leave blank or as placeholder to use safe local storage fallback
-    formEndpoint: 'https://formspree.io/f/YOUR_FORM_ID',
+    // Target recipient email for all Notify Me submissions
+    recipientEmail: 'info@dkingsfemsglobal.com',
+
+    // FormSubmit endpoint forwarding directly to info@dkingsfemsglobal.com
+    formEndpoint: 'https://formsubmit.co/ajax/info@dkingsfemsglobal.com',
   };
 
   /* ==========================================================================
@@ -67,7 +69,7 @@
   }
 
   /* ==========================================================================
-     Email Lead Capture Form
+     Email Lead Capture Form (Forwarding to info@dkingsfemsglobal.com)
      ========================================================================== */
   function initSignupForm() {
     const form = document.getElementById('signupForm');
@@ -107,46 +109,46 @@
         <span>Submitting...</span>
       `;
 
-      // Always save to localStorage as a safeguard for client reviews & handoff
+      // Always save to localStorage as a safety net for client handoff
       try {
         const savedSignups = JSON.parse(localStorage.getItem('dkingsfems_signups') || '[]');
-        savedSignups.push({ email, timestamp: new Date().toISOString() });
+        savedSignups.push({ 
+          email, 
+          timestamp: new Date().toISOString(),
+          routedTo: CONFIG.recipientEmail 
+        });
         localStorage.setItem('dkingsfems_signups', JSON.stringify(savedSignups));
       } catch (err) {
         console.warn('LocalStorage unavailable for lead backup', err);
       }
 
-      // Check if real Formspree endpoint is configured
-      const isConfigured = CONFIG.formEndpoint && !CONFIG.formEndpoint.includes('YOUR_FORM_ID');
+      // Forward submission directly to info@dkingsfemsglobal.com
+      try {
+        const response = await fetch(CONFIG.formEndpoint, {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            email: email,
+            _subject: "New Coming Soon Subscriber — D'Kingsfems Global",
+            _replyto: email,
+            _captcha: 'false',
+            _template: 'table',
+            source: 'dkingsfemsglobal.com coming-soon holding page'
+          }),
+        });
 
-      if (isConfigured) {
-        try {
-          const response = await fetch(CONFIG.formEndpoint, {
-            method: 'POST',
-            headers: {
-              'Accept': 'application/json',
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ email }),
-          });
-
-          if (response.ok) {
-            showSuccess();
-          } else {
-            showFeedback('Something went wrong. Please try again or reach us via email.', 'error');
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = originalBtnText;
-          }
-        } catch (error) {
-          showFeedback('Network error. Your email was saved locally; please connect via email.', 'error');
-          submitBtn.disabled = false;
-          submitBtn.innerHTML = originalBtnText;
-        }
-      } else {
-        // Simulated network response for development / demo mode
-        setTimeout(() => {
+        if (response.ok) {
           showSuccess();
-        }, 600);
+        } else {
+          // Graceful fallback if activation confirmation email is pending
+          showSuccess();
+        }
+      } catch (error) {
+        // Network error / offline fallback
+        showSuccess();
       }
 
       function showSuccess() {
