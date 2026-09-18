@@ -1,0 +1,8 @@
+# robots.txt for dkingsfemsglobal.com
+# Temporary Coming Soon Page — Allow full indexing from Day 1
+
+User-agent: *
+Allow: /
+
+# XML Sitemap
+Sitemap: https://dkingsfemsglobal.com/sitemap.xml

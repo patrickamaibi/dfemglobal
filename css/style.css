@@ -1,0 +1,603 @@
+/* ==========================================================================
+   D'Kingsfems Global Ltd — Coming Soon Page Styles
+   Aesthetic: Ultra-Premium, Minimalist, Editorial Luxury
+   Palette: Deep Celestial Navy (#030712), Brushed Champagne Gold (#D4AF37),
+            Warm Off-White (#F8F9FA)
+   Performance: Zero external dependencies, pure modern CSS3
+   ========================================================================== */
+
+:root {
+  /* Brand Palette - Luxury & Minimalist */
+  --bg-deep: #030712;
+  --bg-midnight: #071224;
+  --card-bg: rgba(7, 18, 36, 0.72);
+  --card-border: rgba(212, 175, 55, 0.18);
+  --card-glow: rgba(212, 175, 55, 0.05);
+
+  --gold-primary: #d4af37;
+  --gold-champagne: #f5df88;
+  --gold-deep: #997316;
+  --gold-subtle: rgba(212, 175, 55, 0.35);
+  --gold-muted: #c2ad79;
+
+  --text-primary: #f8f9fa;
+  --text-secondary: #cbd5e1;
+  --text-muted: #8492a6;
+  --text-dim: #475569;
+
+  /* Typography */
+  --font-serif: 'Cinzel', 'Trajan Pro', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Transitions */
+  --ease-luxury: cubic-bezier(0.25, 1, 0.5, 1);
+  --transition: all 0.4s var(--ease-luxury);
+}
+
+/* --------------------------------------------------------------------------
+   Reset & Base Setup
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-deep);
+  color: var(--text-primary);
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  position: relative;
+  background-image: 
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(26, 54, 93, 0.35) 0%, transparent 80%),
+    radial-gradient(circle 600px at 85% 95%, rgba(212, 175, 55, 0.04) 0%, transparent 60%),
+    linear-gradient(180deg, var(--bg-deep) 0%, #050d1a 60%, var(--bg-deep) 100%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --------------------------------------------------------------------------
+   Animated Background: Trajectory & Large Gold Airplane
+   -------------------------------------------------------------------------- */
+.sky-background {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.travel-bg-overlay,
+.airport-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/hero-bg.png');
+  background-size: cover;
+  background-position: center 35%;
+  background-repeat: no-repeat;
+  opacity: 0.20;
+  pointer-events: none;
+  filter: contrast(108%) brightness(95%);
+}
+
+.ambient-glow {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(29, 66, 122, 0.22) 0%, transparent 70%);
+  filter: blur(60px);
+}
+
+.flight-track-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.28;
+}
+
+.flight-path {
+  fill: none;
+  stroke: url(#flightTrackGrad);
+  stroke-width: 1.5;
+  stroke-dasharray: 6 10;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.3));
+}
+
+/* Enlarge Airplane Significantly (~130px) with Pure Smooth Offset Motion */
+.plane-animator {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  top: 0;
+  left: 0;
+  offset-path: path("M -180 950 C 250 820, 600 550, 1050 420 C 1500 300, 1800 160, 2250 -100");
+  offset-rotate: auto;
+  animation: airplaneDrift 22s cubic-bezier(0.35, 0, 0.65, 1) infinite;
+  opacity: 0;
+  filter: drop-shadow(0 4px 24px rgba(212, 175, 55, 0.45));
+}
+
+.plane-svg {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes airplaneDrift {
+  0% {
+    offset-distance: 0%;
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.5;
+  }
+  85% {
+    opacity: 0.5;
+  }
+  98%, 100% {
+    offset-distance: 100%;
+    opacity: 0;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .plane-animator {
+    animation: none !important;
+    offset-distance: 65% !important;
+    opacity: 0.22 !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Main Minimalist Container & Card
+   -------------------------------------------------------------------------- */
+.main-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 820px;
+  padding: 2rem 1.5rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.holding-card {
+  width: 100%;
+  background: var(--card-bg);
+  backdrop-filter: blur(28px) saturate(130%);
+  -webkit-backdrop-filter: blur(28px) saturate(130%);
+  border: 1px solid var(--card-border);
+  border-radius: 28px;
+  padding: 3.5rem 3rem;
+  box-shadow: 
+    0 35px 80px -20px rgba(0, 0, 0, 0.85),
+    0 0 0 1px rgba(255, 255, 255, 0.03),
+    inset 0 1px 0 rgba(212, 175, 55, 0.25);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Minimalist Top Gold Hairline Glow */
+.holding-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 25%;
+  right: 25%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-champagne), transparent);
+  opacity: 0.7;
+}
+
+/* --------------------------------------------------------------------------
+   Brand & Logo Header
+   -------------------------------------------------------------------------- */
+.logo-container {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.75rem;
+  transition: var(--transition);
+}
+
+.logo-img {
+  height: 84px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.4));
+}
+
+
+.headline {
+  font-family: var(--font-serif);
+  font-size: clamp(2.1rem, 4.5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.headline .gold-text {
+  background: linear-gradient(135deg, #ffffff 10%, var(--gold-champagne) 50%, var(--gold-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.description {
+  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  max-width: 550px;
+  margin-bottom: 2.75rem;
+}
+
+.description .domain-highlight {
+  color: var(--gold-champagne);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+/* --------------------------------------------------------------------------
+   Minimalist Architectural Countdown
+   -------------------------------------------------------------------------- */
+.countdown-section {
+  width: 100%;
+  max-width: 520px;
+  margin-bottom: 2.75rem;
+}
+
+.countdown-minimal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  padding: 1.25rem 1.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(212, 175, 55, 0.14);
+  border-radius: 18px;
+}
+
+.time-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 60px;
+}
+
+.time-digit {
+  font-family: var(--font-serif);
+  font-size: clamp(1.85rem, 3.8vw, 2.5rem);
+  font-weight: 600;
+  color: var(--gold-champagne);
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.time-tag {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--text-dim);
+  margin-top: 0.45rem;
+}
+
+.time-divider {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: rgba(212, 175, 55, 0.35);
+  margin-bottom: 0.75rem;
+  user-select: none;
+}
+
+/* --------------------------------------------------------------------------
+   Minimalist Email Capture Form
+   -------------------------------------------------------------------------- */
+.signup-section {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 2.5rem;
+}
+
+.signup-form {
+  display: flex;
+  background: rgba(4, 9, 18, 0.7);
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  border-radius: 50px;
+  padding: 0.35rem 0.4rem 0.35rem 1.4rem;
+  transition: var(--transition);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+.signup-form:focus-within {
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15), 0 10px 35px rgba(0, 0, 0, 0.5);
+  background: rgba(4, 9, 18, 0.95);
+}
+
+.email-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0.7rem 0.5rem;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+.email-input::placeholder {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, var(--gold-champagne) 0%, var(--gold-primary) 50%, var(--gold-deep) 100%);
+  color: #040912;
+  border: none;
+  border-radius: 50px;
+  padding: 0.75rem 1.75rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  transition: var(--transition);
+  box-shadow: 0 4px 18px rgba(212, 175, 55, 0.3);
+  white-space: nowrap;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #ffffff 0%, var(--gold-champagne) 50%, var(--gold-primary) 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px rgba(212, 175, 55, 0.45);
+}
+
+.submit-btn:active {
+  transform: translateY(1px);
+}
+
+.btn-icon {
+  display: inline-flex;
+  transition: transform 0.25s ease;
+}
+
+.submit-btn:hover .btn-icon {
+  transform: translateX(3px);
+}
+
+/* Feedback Notifications */
+.form-feedback {
+  margin-top: 1rem;
+  font-size: 0.88rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 12px;
+  display: none;
+  animation: fadeInDown 0.3s ease;
+}
+
+.form-feedback.success {
+  display: block;
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.25);
+  color: #4ade80;
+}
+
+.form-feedback.error {
+  display: block;
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  color: #f87171;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* --------------------------------------------------------------------------
+   Minimalist Contact Bar & Socials
+   -------------------------------------------------------------------------- */
+.contact-divider {
+  width: 100%;
+  max-width: 420px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.2), transparent);
+  margin-bottom: 1.5rem;
+}
+
+.contact-channels-minimal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.85rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-link {
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: var(--transition);
+}
+
+.contact-link:hover {
+  color: var(--gold-champagne);
+}
+
+.contact-link svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+  opacity: 0.75;
+}
+
+.contact-dot {
+  color: rgba(212, 175, 55, 0.4);
+  font-size: 0.75rem;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.social-icon-btn:hover {
+  background: rgba(212, 175, 55, 0.1);
+  border-color: rgba(212, 175, 55, 0.4);
+  color: var(--gold-champagne);
+  transform: translateY(-2px);
+}
+
+.social-icon-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+/* --------------------------------------------------------------------------
+   Page Footer
+   -------------------------------------------------------------------------- */
+.page-footer {
+  margin-top: 1.5rem;
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Adaptations
+   -------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .holding-card {
+    padding: 2.25rem 1.25rem;
+    border-radius: 22px;
+  }
+
+  .countdown-minimal {
+    gap: 0.6rem;
+    padding: 1rem 0.75rem;
+  }
+
+  .time-item {
+    min-width: 45px;
+  }
+
+  .time-digit {
+    font-size: 1.65rem;
+  }
+
+  .time-tag {
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
+  }
+
+  .time-divider {
+    font-size: 1.1rem;
+  }
+
+  .signup-form {
+    flex-direction: column;
+    border-radius: 16px;
+    padding: 0.6rem;
+    gap: 0.65rem;
+  }
+
+  .email-input {
+    text-align: center;
+    padding: 0.65rem 0.5rem;
+  }
+
+  .submit-btn {
+    border-radius: 12px;
+    padding: 0.8rem;
+    width: 100%;
+  }
+
+  .contact-dot {
+    display: none;
+  }
+
+  .contact-channels-minimal {
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .plane-animator {
+    width: 90px;
+    height: 90px;
+  }
+}
