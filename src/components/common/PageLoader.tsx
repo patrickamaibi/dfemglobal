@@ -194,7 +194,7 @@ export const PageLoader: React.FC<PageLoaderProps> = ({ onComplete, forceShow = 
             </motion.div>
 
             <img
-              src="/dfem4.svg"
+              src="/dfem4.webp"
               alt="D'Kingsfems Global Ltd"
               className="relative block h-auto w-[min(80vw,20rem)] brightness-0 invert"
             />
