@@ -71,7 +71,7 @@ export const About: React.FC = () => {
   return (
     <PageLayout
       title="About Us | D'Kingsfems Global Ltd"
-      description="D'Kingsfems Global Ltd is a registered travel and study-placement agency in Lagos, Nigeria, helping people with travel, study abroad and event support."
+      description="D'Kingsfems Global Ltd is a registered travel and study-placement agency in Abuja, Nigeria, helping people with travel, study abroad and event support."
       canonicalPath="/about"
     >
       {/* Hero */}
@@ -94,7 +94,7 @@ export const About: React.FC = () => {
               Travel and study abroad, planned with care.
             </h1>
             <p className="mt-5 max-w-2xl font-sans text-base leading-relaxed text-slate-300 sm:text-xl">
-              D&apos;Kingsfems Global Ltd is a Lagos-based travel and study-placement agency. We help
+              D&apos;Kingsfems Global Ltd is an Abuja-based travel and study-placement agency. We help
               individuals, families, students and organisations get where they are going.
             </p>
           </div>
@@ -136,7 +136,7 @@ export const About: React.FC = () => {
                 <div className="flex items-start gap-4 py-4">
                   <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-gold-600" aria-hidden="true" />
                   <div>
-                    <dt className="font-semibold text-navy-900">Based in Lagos</dt>
+                    <dt className="font-semibold text-navy-900">Based in Abuja</dt>
                     <dd className="mt-0.5 text-sm text-slate-600">
                       Our address and directions are on the contact page.
                     </dd>

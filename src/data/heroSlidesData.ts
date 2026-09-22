@@ -3,7 +3,7 @@ import { HeroSlide } from '../types';
 export const heroSlides: HeroSlide[] = [
   {
     id: 'slide-flights',
-    badge: 'IATA Accredited Agency',
+    badge: 'Trusted Travel & Study Advisory',
     title: "Fly Anywhere in Supreme Comfort & Style",
     subtitle: "Direct access to top global airlines, negotiated business and economy fares, and instant reservation ticketing for international and domestic routes.",
     tagline: "International & Domestic Flight Ticketing",

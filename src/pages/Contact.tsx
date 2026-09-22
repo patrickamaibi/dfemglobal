@@ -20,7 +20,7 @@ const FAQS = [
     a: 'We confirm the payment options for your booking when we send your quote, and every fee is shown before you pay.',
   },
   {
-    q: 'Can you help clients outside Lagos or abroad?',
+    q: 'Can you help clients outside Abuja or abroad?',
     a: 'Yes. We work with clients across Nigeria and abroad by phone, WhatsApp, video call and email.',
   },
 ];
@@ -45,7 +45,7 @@ export const Contact: React.FC = () => {
   return (
     <PageLayout
       title="Contact Us | D'Kingsfems Global Ltd"
-      description="Contact D'Kingsfems Global Ltd in Lagos, Nigeria about flights, hotels, study abroad, tours and events, by form, phone, WhatsApp or email."
+      description="Contact D'Kingsfems Global Ltd in Abuja, Nigeria about flights, hotels, study abroad, tours and events, by form, phone, WhatsApp or email."
       canonicalPath="/contact"
     >
       {/* Hero (same treatment as the About and Services pages) */}

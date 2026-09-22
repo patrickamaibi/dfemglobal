@@ -14,7 +14,7 @@ export const ServicesIndex: React.FC = () => {
   return (
     <PageLayout
       title="Our Services | D'Kingsfems Global Ltd"
-      description="Flights, hotels, tours, study abroad, jobs abroad advice, airport transfers, escort cars, conferences and school excursions from D'Kingsfems Global Ltd in Lagos, Nigeria."
+      description="Flights, hotels, tours, study abroad, jobs abroad advice, airport transfers, escort cars, conferences and school excursions from D'Kingsfems Global Ltd in Abuja, Nigeria."
       canonicalPath="/services"
     >
       {/* Hero (same treatment as the About page) */}

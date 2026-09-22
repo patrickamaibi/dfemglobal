@@ -5,12 +5,11 @@ export const siteSettings: SiteSettings = {
   tagline: "Premier International Travel, Tours & Study Placements",
   domain: "dkingsfemsglobal.com",
   phones: {
-    primary: "+2348030000000",
-    secondary: "+2348120000000",
-    display: "+234 (0) 803 000 0000",
+    primary: "+2347059655616",
+    display: "+234 705 965 5616",
   },
   whatsapp: {
-    number: "2348030000000",
+    number: "2347059655616",
     defaultMessage: "Hi D'Kingsfems Global, I would like to make an enquiry about your services.",
   },
   email: {
@@ -19,10 +18,10 @@ export const siteSettings: SiteSettings = {
   },
   office: {
     name: "D'Kingsfems Global Headquarters",
-    addressLine1: "Plot 12, Admiralty Way, Lekki Phase 1",
-    addressLine2: "Victoria Island / Ikeja District",
-    city: "Lagos",
-    state: "Lagos State",
+    addressLine1: "Lugbe Airport Road",
+    addressLine2: "",
+    city: "Abuja",
+    state: "FCT",
     country: "Nigeria",
     hours: "Monday – Friday: 8:00 AM – 6:00 PM | Saturday: 9:00 AM – 4:00 PM",
   },

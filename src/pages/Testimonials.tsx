@@ -114,7 +114,7 @@ export const Testimonials: React.FC = () => {
   return (
     <PageLayout
       title="Client Testimonials | D'Kingsfems Global Ltd"
-      description="Read feedback from travellers, students and organisations that have used D'Kingsfems Global Ltd's travel and study services in Lagos, Nigeria."
+      description="Read feedback from travellers, students and organisations that have used D'Kingsfems Global Ltd's travel and study services in Abuja, Nigeria."
       canonicalPath="/testimonials"
     >
       {/* Hero (same treatment as the About and Services pages) */}

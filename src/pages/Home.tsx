@@ -136,7 +136,7 @@ export const Home: React.FC = () => {
   return (
     <PageLayout
       title="Premier International Travel, Tours & Study Placements"
-      description="D'Kingsfems Global Ltd is your premier travel platform for international flight tickets, corporate travel management, study abroad admissions, bespoke tours, and VIP escort security in Lagos, Nigeria."
+      description="D'Kingsfems Global Ltd is your premier travel platform for international flight tickets, corporate travel management, study abroad admissions, bespoke tours, and VIP escort security in Abuja, Nigeria."
       canonicalPath="/"
     >
         {/* 1. Hero */}

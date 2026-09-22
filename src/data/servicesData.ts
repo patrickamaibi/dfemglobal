@@ -14,7 +14,7 @@ export const servicesData: ServiceItem[] = [
 
 Our seasoned ticketing specialists negotiate favorable business class and economy fare classes, manage complex multi-city itineraries, handle seat allocations, excess luggage arrangements, transit visas, and special meal requests. When disruptions strike, you don't wait on an overseas hotline: our dedicated team proactively manages date changes, refunds, and re-routing so your journey remains smooth and stress-free.`,
     keyBenefits: [
-      'Direct partnerships with leading IATA global and domestic airlines',
+      'Direct partnerships with leading global and domestic airlines',
       'Exclusive negotiated corporate and group fare discounts',
       'Instant e-ticket generation with immediate verification codes',
       '24/7 flight monitoring, rebooking, and delay support',
@@ -79,7 +79,7 @@ Our seasoned ticketing specialists negotiate favorable business class and econom
       }
     ],
     seoTitle: 'International & Domestic Flight Tickets | D\'Kingsfems Global Ltd',
-    seoDescription: 'Book international and domestic flight tickets with D\'Kingsfems Global Ltd. Enjoy best fares, direct airline booking, and 24/7 concierge support in Lagos, Nigeria.',
+    seoDescription: 'Book international and domestic flight tickets with D\'Kingsfems Global Ltd. Enjoy best fares, direct airline booking, and 24/7 concierge support in Abuja, Nigeria.',
     ctaText: 'Request Flight Quote Now'
   },
   {

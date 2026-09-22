@@ -185,10 +185,21 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Bottom bar: just the copyright, since the navigation is already above */}
-        <div className="pt-8 text-center text-xs text-slate-500 sm:text-left">
+        {/* Bottom bar: copyright on the left, build credit on the right */}
+        <div className="flex flex-col items-center gap-2 pt-8 text-center text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between sm:text-left">
           <p>
             © {new Date().getFullYear()} {siteSettings.siteName}. All rights reserved.
+          </p>
+          <p>
+            Designed and developed by{' '}
+            <a
+              href="https://www.discoverytechhub.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded font-medium text-slate-400 underline decoration-slate-600 underline-offset-2 transition-colors hover:text-gold-300 hover:decoration-gold-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400"
+            >
+              DiscoveryTech Hub
+            </a>
           </p>
         </div>
       </div>
