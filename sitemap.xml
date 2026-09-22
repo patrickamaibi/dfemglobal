@@ -1,9 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- 01: Homepage -->
   <url>
     <loc>https://dkingsfemsglobal.com/</loc>
     <lastmod>2026-09-18</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
+  </url>
+
+  <!-- 02: About Us -->
+  <url>
+    <loc>https://dkingsfemsglobal.com/about</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 03: Services Index -->
+  <url>
+    <loc>https://dkingsfemsglobal.com/services</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- 04: International & Domestic Flight Tickets -->
+  <url>
+    <loc>https://dkingsfemsglobal.com/services/flight-tickets</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 05: Corporate Travel Management -->
+  <url>
+    <loc>https://dkingsfemsglobal.com/services/corporate-travel</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 06: Airport Pick-Up & Drop-Off -->
+  <url>
+    <loc>https://dkingsfemsglobal.com/services/airport-transfers</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 07: Tours & Cruises -->
+  <url>
+    <loc>https://dkingsfemsglobal.com/services/tours-cruises</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 08: Hotel Bookings -->
+  <url>
+    <loc>https://dkingsfemsglobal.com/services/hotel-bookings</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 09: Study Abroad -->
+  <url>
+    <loc>https://dkingsfemsglobal.com/services/study-abroad</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- 10: Jobs Abroad -->
+  <url>
+    <loc>https://dkingsfemsglobal.com/services/jobs-abroad</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 11: Escort Cars (Intra & Interstate) -->
+  <url>
+    <loc>https://dkingsfemsglobal.com/services/escort-cars</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 12: Conference Management -->
+  <url>
+    <loc>https://dkingsfemsglobal.com/services/conference-management</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 13: School Excursions -->
+  <url>
+    <loc>https://dkingsfemsglobal.com/services/school-excursions</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 14: Testimonials -->
+  <url>
+    <loc>https://dkingsfemsglobal.com/testimonials</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 15: Contact -->
+  <url>
+    <loc>https://dkingsfemsglobal.com/contact</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 </urlset>

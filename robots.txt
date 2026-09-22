@@ -1,8 +1,10 @@
 # robots.txt for dkingsfemsglobal.com
-# Temporary Coming Soon Page — Allow full indexing from Day 1
+# D'Kingsfems Global Ltd — Production 15-Page Travel Platform
 
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /studio/
 
 # XML Sitemap
 Sitemap: https://dkingsfemsglobal.com/sitemap.xml
