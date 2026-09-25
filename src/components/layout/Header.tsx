@@ -67,7 +67,7 @@ export const Header: React.FC = () => {
             <img
               src="/dfems5.svg"
               alt="D'Kingsfems Global Ltd"
-              className="h-16 w-auto object-contain brightness-0 invert drop-shadow-[0_8px_16px_rgba(0,0,0,0.5)] transition-transform duration-300 ease-out group-hover:-translate-y-1 group-hover:scale-110 group-hover:drop-shadow-[0_14px_24px_rgba(0,0,0,0.55)] sm:h-20"
+              className="h-20 w-auto object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.5)] transition-transform duration-300 ease-out group-hover:-translate-y-1 group-hover:scale-110 group-hover:drop-shadow-[0_14px_24px_rgba(0,0,0,0.55)] sm:h-20"
             />
           </Link>
 
