@@ -61,6 +61,13 @@ export const Footer: React.FC = () => {
   ].filter((s) => Boolean(s.href));
 
   const footerServices = servicesData.slice(0, FOOTER_SERVICE_COUNT);
+  const locationText = [
+    siteSettings.office.addressLine1,
+    siteSettings.office.city,
+    siteSettings.office.country,
+  ]
+    .filter(Boolean)
+    .join(', ');
 
   const socialButton =
     'flex h-9 w-9 items-center justify-center rounded-lg border border-navy-800 bg-navy-900 text-slate-300 transition-colors hover:border-gold-400 hover:text-gold-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-400';
@@ -160,10 +167,7 @@ export const Footer: React.FC = () => {
             <ul className="mt-4 space-y-3 text-sm text-slate-400">
               <li className="flex items-start gap-2.5">
                 <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0 text-gold-400" />
-                <span>
-                  {siteSettings.office.addressLine1}, {siteSettings.office.city},{' '}
-                  {siteSettings.office.country}
-                </span>
+                <span>{locationText}</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="h-4 w-4 flex-shrink-0 text-gold-400" />

@@ -18,7 +18,7 @@ export const siteSettings: SiteSettings = {
   },
   office: {
     name: "D'Kingsfems Global Headquarters",
-    addressLine1: "Lugbe Airport Road",
+    addressLine1: "",
     addressLine2: "",
     city: "Abuja",
     state: "FCT",
