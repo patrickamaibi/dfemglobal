@@ -27,7 +27,7 @@ export const siteSettings: SiteSettings = {
   },
   socialLinks: {
     instagram: "https://www.instagram.com/dkingsfemsglobal",
-    facebook: "https://facebook.com/dkingsfemsglobal",
+    facebook: "https://facebook.com/dKingsfemsglobal",
     linkedin: "https://www.linkedin.com/company/dkingsfemsglobal",
     twitter: "https://twitter.com/dkingsfems",
   },

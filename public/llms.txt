@@ -1,0 +1,24 @@
+# D'Kingsfems Global Ltd
+
+> D'Kingsfems Global Ltd is a travel agency based in Lagos, Nigeria. It offers international and domestic flight tickets, corporate travel management, study abroad admissions, bespoke tours and cruises, airport transfers, hotel bookings, VIP escort security and conference management.
+
+Website: https://dkingsfemsglobal.com
+
+## Main pages
+
+- [Home](https://dkingsfemsglobal.com/): Overview of the company and its travel services
+- [About Us](https://dkingsfemsglobal.com/about): Who we are and how we work
+- [Services](https://dkingsfemsglobal.com/services): Full list of travel, study abroad and executive mobility services
+- [Testimonials](https://dkingsfemsglobal.com/testimonials): Feedback from clients
+- [Contact](https://dkingsfemsglobal.com/contact): Get in touch or request a booking
+
+## Services in brief
+
+- Flight tickets (international and domestic)
+- Corporate travel management
+- Study abroad admissions and placements
+- Tours and cruises
+- Airport transfers
+- Hotel bookings
+- Escort cars and VIP security
+- Conference management
